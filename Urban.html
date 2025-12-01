@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Urban Photos </title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+<body class="urbanBody">
+    <header> 
+     <h1 class="urbanPhotos"> URBAN </h1>   
+    </header>
+    <div class="gallery">
+        <img src="urban1.jpg" class="slide">
+        <img src="urban2.jpg" class="slide">
+        <img src="urban3.jpg" class="slide">
+        <img src="urban4.jpg" class="slide">
+        <img src="urban5.jpg" class="slide">
+        <img src="urban6.jpg" class="slide">
+        <img src="urban7.jpg" class="slide">
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <script>
+        let slides= document.querySelectorAll('.slide');
+        let current= 0;
+        let slideshowStarted= false;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+         }
+
+         function nextSlide() {
+            current= (current + 1) % slides.length;
+            showSlide(current);
+         }
+
+         function prevSlide() {
+            current= (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+         }
+
+         document.querySelector('.next').addEventListener('click', () => {
+            if (!slideshowStarted) startSlideshow();
+            nextSlide();
+         });
+         document.querySelector('.prev').addEventListener('click', () => {
+            if(!slideshowStarted)  startSlideshow();
+            prevSlide();
+         });
+          
+         function startSlideshow(){
+            slideshowStarted= true;
+            setInterval(nextSlide, 5000);
+         }
+
+         setTimeout(() => {
+            showSlide(current);
+            startSlideshow();
+         }, 8000);
+    </script>
+</body>
+</html>

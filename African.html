@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+        <title> African </title>
+    </head>
+    <body class="africanBody">
+        <header> 
+           <h1 class="fade-in" id="name-title">
+  <span class="letter first">A</span>
+  <span class="letter merge">f</span>
+  <span class="letter merge">r</span>
+  <span class="letter merge">i</span>
+  <span class="letter merge">c</span>
+  <span class="letter merge">a</span>
+  <span class="letter last">n</span>
+</h1>
+           <script>
+             document.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll(".fade-in, .slide-up");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = "running";
+        observer.unobserve(entry.target);
+
+        // Enhanced logic for name-title animation
+        if (entry.target.id === "name-title") {
+          setTimeout(() => {
+            const nameTitle = entry.target;
+            const first = nameTitle.querySelector(".first");
+            const last = nameTitle.querySelector(".last");
+            const mergeLetters = nameTitle.querySelectorAll(".merge");
+
+            // Step 1: Fade out A and N
+            if (first) first.classList.add("fade-out");
+            if (last) last.classList.add("fade-out");
+
+            // Step 2: Merge f, r, i, c, a into "frica"
+            setTimeout(() => {
+              const aleSpan = document.createElement("span");
+              aleSpan.textContent = "Africa";
+              aleSpan.className = "merge-africa";
+
+              mergeLetters.forEach(letter => letter.remove());
+              nameTitle.insertBefore(aleSpan, last);
+
+            }, 2500);
+          }, 3000); // Initial delay after fade-in
+        }
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animatedElements.forEach(el => {
+    el.style.animationPlayState = "paused";
+    observer.observe(el);
+  });
+});
+  </script>
+      </header>
+      <h1> To support this work <button class="button"> <a href=Donations.html> Click here</a> </button></h1>
+       <div class="gallery">
+        <img src="african1.jpg" class="slide">
+        <img src="african2.jpg" class="slide">
+        <img src="african3.jpg" class="slide">
+        <img src="african4.jpg" class="slide">
+        <img src="african5.jpg" class="slide">
+        <img src="african6.jpg" class="slide">
+        <img src="african7.jpg" class="slide">
+        <img src="african8.jpg" class="slide">
+        <img src="african9.jpg" class="slide">
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <script>
+        let slides= document.querySelectorAll('.slide');
+        let current= 0;
+        let slideshowStarted= false;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+         }
+
+         function nextSlide() {
+            current= (current + 1) % slides.length;
+            showSlide(current);
+         }
+
+         function prevSlide() {
+            current= (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+         }
+
+         document.querySelector('.next').addEventListener('click', () => {
+            if (!slideshowStarted) startSlideshow();
+            nextSlide();
+         });
+         document.querySelector('.prev').addEventListener('click', () => {
+            if(!slideshowStarted)  startSlideshow();
+            prevSlide();
+         });
+          
+         function startSlideshow(){
+            slideshowStarted= true;
+            setInterval(nextSlide, 5000);
+         }
+
+         setTimeout(() => {
+            showSlide(current);
+            startSlideshow();
+         }, 8000);
+    </script>
+    </body>
+</html>

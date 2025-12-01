@@ -1,0 +1,391 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  height: 100vh;
+  background: url('hero.jpg') center cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 1s;
+}
+
+.slide-up {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1.5s forwards;
+   margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at center, #0f0f0f, #1a1a1a);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+.message {
+    animation: fadeInOutSlow 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInOutSlow {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.connect-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      animation: backgroundPulse 5s infinite;
+    }
+
+    .connect-button {
+      padding: 2rem 4rem;
+      font-size: 2rem;
+      color: #fff;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0, 114, 255, 0.6);
+      animation: bounce 2s infinite, glow 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .connect-button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px rgba(0,114,255,0.4); }
+      50% { box-shadow: 0 0 30px rgba(0,114,255,0.8); }
+      100% { box-shadow: 0 0 10px rgba(0,114,255,0.4); }
+    }
+
+    @keyframes backgroundPulse {
+      0% { background: radial-gradient(circle at center, #0f0f0f, #1a1a1a); }
+      50% { background: radial-gradient(circle at center, #1a1a1a, #0f0f0f); }
+      100% { background: radial-gradient(circle at center, #0f0f0f, #1a1a1a); }
+    }
+    /* Letter fade-out animation */
+@keyframes vanish {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5) rotate(15deg);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-15deg);
+    filter: blur(4px);
+  }
+}
+
+.fade-out {
+  animation: vanish 2.5s ease-in-out forwards;
+}
+.African {
+  animation: fadeInOutSlow 5s ease-in-out infinite;
+}
+.Nature {
+  animation: fadeInOutSlow 7s ease-in-out infinite;
+}
+.Urban {
+  animation: fadeInOutSlow 10s ease-in-out infinite;
+}
+.urbanPhotos {
+  animation: pulse1 7s infinite;
+  font-size: 6em;
+}
+@keyframes pulse1 {
+  0% { color: green}
+  10% { color: white}
+  20% { color: red}
+  30% { color: white}
+  40% { color: black}
+  50% { text-shadow: black}
+  60% { text-shadow: white}
+  70% { color:green}
+  80%{ color: white}
+  90%{ color:red}
+  100%{ color: black}
+
+}
+/* Merge animation */
+@keyframes mergeLetters {
+  0% {
+    letter-spacing: 0.5em;
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.1em;
+    opacity: 1;
+  }
+}
+
+.merge-ale {
+  animation: mergeLetters 5s ease forwards;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Transition text */
+.fade-text {
+  animation: vanish 2s ease forwards;
+}
+ @keyframes fadeZoom {
+   0% {
+    transform: scale(1);
+    opacity: 1;
+   }
+    50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+    }
+    100% {
+    transform: scale(1);
+    opacity: 1;
+    }
+     }
+     .AboutBackground {
+      background-image: url("AboutBackground.jpg");
+      background-size: cover;
+      height: 100vh;
+      background-position: center;
+      animation: fadeBackground 6s infinite;
+     }
+     @keyframes fadeBackground {
+      0% {opacity:0}
+      50% {opacity:1}
+      100% {opacity:0}
+     }
+     .urbanBody {
+      position: relative;
+      height: 100vh;
+      margin: 0;
+     } 
+     .urbanBody::before {
+      content: "";
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-image: url("urbanBackground.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: fadeOnce 8s ease-in-out forwards;
+      z-index: -1;
+     }
+     @keyframes fadeOnce {
+      0% {opacity:0}
+      30% {opacity:1}
+      100% {opacity:0}
+     }
+     .gallery {
+      position: relative;
+      width: 100%;
+      max-width: 90vw;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+     }
+     .gallery.visible {
+      opacity: 1;
+     }
+     .slide {
+      display: none;
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      height: auto;
+     }
+     .slide.active {
+      display: block;
+      animation: fade 1s ease-in-out;
+     }
+     @keyframes fade {
+      from { opacity:0}
+      to { opacity:1}
+     }
+     button.prev, button.next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+     }
+     button.prev { left: 10px;}
+     button.next { right: 10px;}
+     .nature {
+      font-size: 7em;
+      animation: pulse 8s infinite;
+     }
+     @keyframes pulse {
+      0% { color: red }
+      20% { color:blue}
+      40% { color: violet}
+      60% { text-transform:uppercase;}
+      80% { font-style: italic;}
+      100% { font-weight: bold;}
+     }
+      .natureBody{
+      position: relative;
+      height: 100vh;
+      margin: 0;
+     } 
+     .natureBody::before {
+      content: "";
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-image: url("NatureBackground1.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: fadeOnce 8s ease-in-out forwards;
+      z-index: -1;
+     }
+     @keyframes fadeOnce {
+      0% {opacity:0}
+      30% {opacity:1}
+      100% {opacity:0}
+     }
+     .merge-africa {
+       font-size: 8em;
+       animation: pulse2 7s infinite;
+     }
+     @keyframes  pulse2 {
+      0% { color: brown }
+      20% { color: purple }
+      40% { color: violet }
+      60% { color: yellow }
+      80% { color: blue }
+      100% { text-shadow: red }
+     }
+     .africanBody {
+       position: relative;
+      height: 100vh;
+      margin: 0;
+      color: #00ffcc;
+     }
+     .africanBody::before {
+      content: "";
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-image: url("africanBackground.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: fadeOnce 8s ease-in-out forwards;
+      z-index: -1;
+     }
+     @keyframes fadeOnce {
+      0% {opacity:0}
+      30% {opacity:1}
+      100% {opacity:0}
+     }
+     .button {
+      background-color:#00ffcc;
+     }
+     

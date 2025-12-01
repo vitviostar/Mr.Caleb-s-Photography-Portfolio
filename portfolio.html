@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caleb's Photography Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <script defer src="portfolio.js"></script>
+</head>
+<body>
+  <header class="hero">
+   <img src="portfolioLogo.jpg"
+     alt="House Of Rings Photography logo"
+     id="fadeLogo"
+     style="width:200px; height:200px; border-radius:50%; object-fit:cover; box-shadow:0 4px 8px rgba(255,255,255,0.6); opacity:0; transition:opacity 5s ease, transform 0.6s ease;"
+     onmouseover="this.style.opacity='0'; this.style.transform='scale(1.2)';"
+     onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
+<script>
+  window.onload = function() {
+    document.getElementById("fadeLogo").style.opacity = "1";
+  };
+</script>
+
+  <h1 class="fade-in" id="name-title">
+  <span class="letter first">C</span>
+  <span class="letter merge">a</span>
+  <span class="letter merge">l</span>
+  <span class="letter merge">e</span>
+  <span class="letter last">b</span>
+  <span class="photography-text">Photography</span>
+</h1>
+
+    <p class="fade-in delay">Capturing moments, telling stories</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="section slide-up">
+    <h2>About Me</h2>
+    <section class="AboutBackground"> </section>
+    <p class="message"> I’m a passionate photographer based in Kenya, specializing in portraits, nature, and urban storytelling.</p>
+        <p> Hey there! I’m a passionate and seasoned photographer with a sharp eye for detail and a heart that beats for storytelling through the lens. With years of experience behind the camera, I’ve had the honor of capturing everything from breathtaking landscapes 🌄 to intimate portraits 👩‍❤️‍👨, high-energy events 🎉 to quiet, soulful moments 🕊️.
+
+What sets me apart? It’s not just the gear or the technique — it’s the connection. I believe every photo should speak, breathe, and live. My clients often say I don’t just take pictures — I freeze emotions, preserve memories, and turn fleeting seconds into timeless treasures 🖼️.
+
+Thanks to countless glowing recommendations 🌟 and word-of-mouth referrals, my work has traveled far and wide. Whether it’s a wedding, a brand shoot, a graduation, or a spontaneous adventure, I bring creativity, professionalism, and a touch of magic to every frame.
+
+I’m not just here to take photos — I’m here to elevate your story. Let’s create something unforgettable together. 💫
+    </p>
+  </section>
+
+  <section id="gallery" class="section fade-in">
+    <h2>Gallery</h2>
+    <div class="grid">
+      <a href="African.html" class="African"> African </a>
+      <a href="Nature.html" class="Nature"> Nature </a>
+      <a href="Urban.html" class="Urban"> Urban </a>
+    </div>
+  </section>
+
+  <section id="contact" class="section slide-up">
+    <h2>Contact Me</h2>
+    <div class="connect-screen">
+    <a href="contact.html" class="connect-button">Press here to get connected</a>
+  </div>
+  </section>
+
+  <footer class="fade-in">
+    <p class="copyright">&copy; 2025 Caleb Photography</p>
+  </footer>
+</body>
+</html>

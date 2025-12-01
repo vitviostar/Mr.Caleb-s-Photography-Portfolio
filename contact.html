@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="contact.js"></script>
+  <link rel="stylesheet" type="text/css" href="contact.css">
+  <title> Contact </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #2a2a3d;
+      border-radius: 20px;
+      padding: 30px;
+      width: 320px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      animation: floatIn 1.2s ease-out;
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 24px;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { color: #00ffff; }
+      50% { color: #ff00ff; }
+    }
+
+    .contact-info {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .contact-info span {
+      display: block;
+      margin-bottom: 8px;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .links a {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      text-align: center;
+      background: #00aaff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+      background: #00ffaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>📸 Contact Caleb</h2>
+    <div class="contact-info"> 
+      <span>📞 Phone 1: +254712345678</span>
+      <span>📞 Phone 2: +254798765432</span>
+      <span>📧 Gmail: caleb.photos@gmail.com</span>
+    </div>
+    <div class="links">
+      <a href="https://wa.me/254706935999?text=Hello%2C%20I%20saw%20your%20photography%20portfolio" target="_blank">Message on WhatsApp</a>
+      <a href="mailto:vitviostar254@gmail.com?subject=Photography%20Portfolio&body=Hello%2C%20I%20saw%20your%20photography%20portfolio" target="_blank">Send Gmail Message</a>
+    </div>
+  </div>
+  <div>
+    <p> Hover me</p><br>
+  </div><br>
+   <div class="mobile1">
+      <strong> 0706935999 </strong>
+                <span class="side-text" id="clickOptions">
+                     <!-- Options of calling will be injected here by JS -->
+                </span>
+  </div>
+</body>
+</html>
