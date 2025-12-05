@@ -1,18 +1,22 @@
- .side-text {
-    position: absolute;
-    left: 50%;
-    top:100%;
-    background: #333;
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    transform:translateY(-50%);
-    visibility: hidden;
-    transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s;
-    z-index: 1000;
+.side-text {
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px); /* initial hidden state */
+  visibility: hidden;
+  transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s;
+  z-index: 1000;
+  max-width: 90vw;
+  word-wrap: break-word;
+  pointer-events: none; /* prevent accidental clicks when hidden */
 }
+
 .side-text a {
   display: inline-block;
   margin: 0 4px;
@@ -23,32 +27,30 @@
   text-decoration: none;
   font-size: 13px;
 }
+
 .side-text a:hover {
   background: #128C7E;
 }
+
 .mobile1 {
-    animation: float2 3s ease-in-out infinite;
-    color: black;
-    position: relative;
-    display:inline-block;
-    
+  animation: float2 3s ease-in-out infinite;
+  color: black;
+  position: relative;
+  display: inline-block;
 }
+
 @keyframes float2 {
-    0% 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
+
 .mobile1:hover {
-    text-decoration: underline;
-    color: #ff6A00;
-    animation: float4 3s ease-in-out infinite;
+  text-decoration: underline;
+  color: #ff6A00;
+  animation: float4 3s ease-in-out infinite;
 }
+
 @keyframes float4 {
-    0% 100% { transform: translateX(0); }
-    50% { transform: translateX(-10px); }
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
 }
-
-
-
-
-
-
