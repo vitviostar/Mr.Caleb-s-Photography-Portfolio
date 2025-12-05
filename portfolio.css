@@ -167,7 +167,7 @@ img:hover {
 
 .urbanPhotos {
   animation: pulse1 7s infinite;
-  font-size: 6em;
+  font-size: 10vw;
 }
 
 @keyframes pulse1 {
@@ -220,9 +220,11 @@ img:hover {
 .AboutBackground {
   background-image: url("AboutBackground.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 60vh;
   background-position: center;
   animation: fadeBackground 6s infinite;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes fadeBackground {
@@ -302,7 +304,7 @@ button.prev { left: 10px; }
 button.next { right: 10px; }
 
 .nature {
-  font-size: 7em;
+  font-size: 10vw;
   animation: pulse 8s infinite;
 }
 
@@ -314,7 +316,7 @@ button.next { right: 10px; }
   80% { font-style: italic; }
 }
 .merge-africa {
-       font-size: 8em;
+       font-size: 12vw;
        animation: pulse2 7s infinite;
      }
 @keyframes  pulse2 {
@@ -324,4 +326,5 @@ button.next { right: 10px; }
   60% { color: yellow }
   80% { color: blue }
   100% { text-shadow: red }
+
   }
